@@ -1,0 +1,611 @@
+{
+	"info": {
+		"_postman_id": "8518b817-5593-4cc6-9272-cc6faca0e66a",
+		"name": "MedicLine",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "44330114",
+		"_collection_link": "https://neculavalentin.postman.co/workspace/Necula-Valentin's-Workspace~a8c75909-3870-4509-83fc-4608931c55b2/collection/44330114-8518b817-5593-4cc6-9272-cc6faca0e66a?action=share&source=collection_link&creator=44330114"
+	},
+	"item": [
+		{
+			"name": "SignUp-Client",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\" : \"MariusAndrei\",\r\n    \"password\" : \"1q2w3e4r5t\",\r\n    \"email\" : \"mariusandrei2003@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/auth/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"auth",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login-Client",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\" : \"MariusAndrei\",\r\n    \"password\" : \"1q2w3e4r5t\",\r\n    \"email\" : \"mariusandrei2003@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Verify-Token",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJNYXJpdXNBbmRyZWkiLCJpYXQiOjE3NDY2MzEzNjYsImV4cCI6MTc0NjcxNzc2Nn0.hB6FYDIK_M_uGsMYkW40gNDjSJpU6DHG6Kx-WFtc1io",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/auth/verify-token",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"auth",
+						"verify-token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Adaugare_Clinica",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nume\": \"Amamed\",\r\n    \"adresa\": \"Strada Sperantei nr.5\",\r\n    \"telefon\":\"076933123\",\r\n    \"email\": \"AmamedBz@gmail.com\",\r\n    \"Oras\": \"Buzau\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/clinics",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"clinics"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "All-Clients",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/auth/clients",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"auth",
+						"clients"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "All-Clinics/id",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/clinics/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"clinics",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "All-clinics",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/clinics",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"clinics"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Modificare clinica",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n    \"nume\": \"Amamed\",\r\n    \"adresa\": \"Strada Sperantei nr.5\",\r\n    \"telefon\":\"076933123\",\r\n    \"email\": \"AmamedBz@gmail.com\",\r\n    \"Oras\": \"Buzau\"\r\n}\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/clinics/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"clinics",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Stergere clinica",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/clinics/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"clinics",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Signup_Specialist",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"Tanasescu Viorel\",\r\n    \"password\":\"Tanase!321\",\r\n    \"telefon\":\"0328590544\",\r\n    \"rol\" : \"ginlecolog\",\r\n    \"clinicaNume\":\"Amamed\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/specialists/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"specialists",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Afisare specialisti",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/specialists",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"specialists"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Afisare_Specialisti unei Clinici",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/specialists/clinica/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"specialists",
+						"clinica",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login_Specialist",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"username\": \"drmarinescu\",\r\n  \"password\": \"parola321\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/specialists/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"specialists",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Specialist/id",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/specialists/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"specialists",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Creare programare",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"clientId\": 7,\r\n  \"specialistId\": 5,\r\n  \"dataOra\": \"2025-05-08T10:30:00\",\r\n  \"tip\": \"video\",\r\n  \"linkVideo\": \"https://meet.jit.si/test\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/appointments",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"appointments"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Programarile cl cu ID",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJDcnN0aWFuIiwiaWF0IjoxNzQ2NTM2MTQzLCJleHAiOjE3NDY2MjI1NDN9.dJa8gbeXD-zpjz0LSvG_sH5ggBX94ujMng7eSDcXLbI",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"clientId\": 5,\r\n  \"specialistId\": 3,\r\n  \"dataOra\": \"2025-05-05T14:00:00\",\r\n  \"tip\": \"fizic\",\r\n  \"linkVideo\": \"https://meet.jit.si/programare-test3\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/appointments/client/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"appointments",
+						"client",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Programarile Sp cu ID",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/appointments/specialist/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"appointments",
+						"specialist",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Modificare status programare",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/appointments/2/status?status=confirmată",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"appointments",
+						"2",
+						"status"
+					],
+					"query": [
+						{
+							"key": "status",
+							"value": "confirmată"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Recomandare",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"simptome\" : \"tensiune mare\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/recommendation",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"recommendation"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Adaugare Afectiuni",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nume\": \"dificultati de respiratie\",\r\n  \"rol\": \"pneumolog\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/afectiuni",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"afectiuni"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
